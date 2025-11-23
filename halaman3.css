@@ -1,0 +1,137 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0a192f, #112d4e, #1e3a5f);
+  background-size: 600% 600%;
+  animation: gradientMove 18s ease infinite;
+  color: #e8f0f8;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== HEADING ===== */
+h1 {
+  font-size: 2.3rem;
+  margin: 25px 0;
+  text-align: center;
+  color: #cde8d7; /* hijau soft */
+  text-shadow: 0 0 12px rgba(173, 255, 200, 0.4);
+}
+
+h2 {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: #c1ffdd;
+  text-shadow: 0 0 8px rgba(150, 255, 190, 0.4);
+}
+
+/* ===== PARAGRAF ===== */
+p {
+  font-size: 1.15rem;
+  margin: 14px 0;
+  line-height: 1.7;
+  color: #f0f4f9;
+  text-shadow: 0 0 6px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/* ===== QUOTES SPECIAL ===== */
+p.quote {
+  margin: 18px 0;
+  padding: 12px 18px;
+  border-left: 4px solid #8fffc9;
+  background: rgba(143, 255, 201, 0.08);
+  border-radius: 8px;
+  font-style: italic;
+  color: #e9fff3;
+  text-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+/* ===== BUTTONS ===== */
+.button-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 14px 26px;
+  color: #ffffff;
+  font-size: 1rem;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.08);
+}
+
+/* ===== PARTICLES ===== */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(173, 216, 230, 0.75);
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+  pointer-events: none;
+  animation: floatDown linear infinite;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-20px) scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) scale(1.15);
+    opacity: 0;
+  }
+}
+
+
+/* ===== FIX JUDUL BIAR TIDAK TURUN JAUH ===== */
+
+.judul {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.judul h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.8rem !important;
+  line-height: 1.3;
+  text-align: left !important;
+  word-break: break-word;
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+  .judul h1 {
+    font-size: 1.25rem !important;
+    line-height: 1.25;
+  }
+}

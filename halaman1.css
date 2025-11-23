@@ -1,0 +1,81 @@
+/* Reset sederhana */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #0d1b2a, #1b3b6f, #2a5298); /* biru gelap */
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+button {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.4);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Partikel */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(173, 216, 230, 0.7); /* biru muda semi transparan */
+  pointer-events: none;
+  animation: floatDown linear infinite;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-10px) scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) scale(1);
+    opacity: 0;
+  }
+}
